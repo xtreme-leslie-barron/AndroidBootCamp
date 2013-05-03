@@ -14,7 +14,7 @@ public class MainActivity extends Activity {
 	private TwitterConnector tweetGetter;
 	
 	public MainActivity() {
-		tweetGetter = new TwitterConnector("#abc");
+		tweetGetter = new TwitterConnector(getString(R.string.default_search));
 	}
 	
 	@Override
@@ -23,6 +23,8 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.tweet_list);
 		
 		new GetTweetsTask().execute();
+		
+		
 	}
 
 	
