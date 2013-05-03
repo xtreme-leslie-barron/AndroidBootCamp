@@ -5,27 +5,24 @@ import java.util.List;
 import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class MainActivity extends Activity {
 	
-	private Tweets tweetGetter;
+	private TwitterConnector tweetGetter;
 	
 	public MainActivity() {
-		tweetGetter = new Tweets("#abc");
+		tweetGetter = new TwitterConnector("#abc");
 	}
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.tweet_list);
 		
 		new GetTweetsTask().execute();
-		
-		Log.e("", "message");
 	}
 
 	

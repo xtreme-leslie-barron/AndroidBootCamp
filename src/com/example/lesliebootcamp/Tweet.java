@@ -18,7 +18,7 @@ public class Tweet {
 	private String user;
 	private Bitmap userImage;
 	
-	public Tweet(JSONObject jsonObject, Tweets tweeter) {
+	public Tweet(JSONObject jsonObject, TwitterConnector tweeter) {
 
 		try {
 			text = jsonObject.getString(TEXT_KEY);

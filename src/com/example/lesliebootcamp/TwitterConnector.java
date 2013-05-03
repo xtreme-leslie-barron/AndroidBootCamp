@@ -22,14 +22,14 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Log;
 
-public class Tweets {
+public class TwitterConnector {
 
 	private final static String BASE_TWITTER_URL = "http://search.twitter.com/search.json";
 	private final static String PARAMETER_FORMAT = "?q=%s&include_entities=true&result_type=mixed";
 	
 	private String parameterUrl;
 	
-	public Tweets(String searchText) {
+	public TwitterConnector(String searchText) {
 		setSearchText(searchText);
 	}
 	

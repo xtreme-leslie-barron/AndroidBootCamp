@@ -56,7 +56,7 @@ public class TweetAdapter extends ArrayAdapter<Tweet>{
         return row;
     }
     
-    static class TweetHolder
+    private static class TweetHolder
     {
         ImageView imgIcon;
         TextView tweetText;
