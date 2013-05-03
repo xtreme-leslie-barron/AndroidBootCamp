@@ -28,6 +28,7 @@ public class TwitterConnector {
 	private final static String PARAMETER_FORMAT = "?q=%s&include_entities=true&result_type=mixed";
 	
 	private String parameterUrl;
+	private String searchText;
 	
 	public TwitterConnector(String searchText) {
 		setSearchText(searchText);
@@ -35,11 +36,16 @@ public class TwitterConnector {
 	
 	
 	public void setSearchText(String searchText) {
+		this.searchText = searchText;
 		try {
 			parameterUrl = String.format(PARAMETER_FORMAT, URLEncoder.encode(searchText, "UTF-8"));
 		} catch (UnsupportedEncodingException e) {
 			Log.e("URL Encoding Error", e.getMessage());
 		}
+	}
+	
+	public String getSearchText() {
+		return searchText;
 	}
 	
 	public List<Tweet> getTweets() {
@@ -48,7 +54,7 @@ public class TwitterConnector {
 		
 		String url = BASE_TWITTER_URL + parameterUrl;
 		
-		Log.e("URL", url);
+		Log.i("URL", url);
 		
 		try {
 			jsonObject = new JSONObject(convertStreamToString(executeGetRequest(url)));

@@ -8,18 +8,26 @@
         android:layout_width="fill_parent"
         android:layout_height="50dp"
         android:inputType="text"
-        android:text="@string/default_search" />
-
-    <ScrollView
+        android:hint="@string/default_search" />
+    
+    <RelativeLayout
+        android:id="@+id/loadingLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/searchTweets" >
+        android:layout_below="@+id/searchTweets" >
 
-        <LinearLayout
-            android:id="@+id/tweetList"
-            android:layout_width="fill_parent"
+        <ProgressBar
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
+            android:layout_centerInParent="true" />
+    
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/tweetList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loadingLayout" />
 
 </RelativeLayout>

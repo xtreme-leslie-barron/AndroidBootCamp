@@ -3,6 +3,7 @@
 
     <string name="app_name">LeslieBootcamp</string>
     <string name="action_settings">Settings</string>
-    <string name="default_search">#abc</string>
+    <string name="default_search">Search Here</string>
+    <string name="loading">Loading</string>
 
 </resources>
