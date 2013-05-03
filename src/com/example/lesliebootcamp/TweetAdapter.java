@@ -15,7 +15,7 @@ public class TweetAdapter extends ArrayAdapter<Tweet>{
 
     private Context context; 
     private int layoutResourceId;    
-    private List<Tweet> data = null;
+    private List<Tweet> data;
     
     public TweetAdapter(Context context, int layoutResourceId, List<Tweet> data) {
         super(context, layoutResourceId, data);

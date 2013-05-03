@@ -46,7 +46,7 @@ public class MainActivity extends Activity {
 				public void run() {
 					ListView list = new ListView(MainActivity.this);
 					ArrayAdapter<Tweet> adapter =
-						new TweetAdapter(MainActivity.this, R.layout.tweet_layout, tweets);
+						new TweetAdapter(MainActivity.this, R.layout.tweet, tweets);
 					list.setAdapter(adapter);
 					setContentView(list);
 					
